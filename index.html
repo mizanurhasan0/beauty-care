@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pre_styles.css">
+</head>
+
+<body>
+    <header class="main-header flex text-lg" style="height: 100px;">
+        <nav class="navbar container mx-auto flex item-center justify-between">
+            <img src="./assets/logo.svg" alt="Description of SVG" />
+
+            <ul id="menuItems" class="nav-links font-medium flex" style="gap: 15px;">
+                <!-- Menu Items -->
+            </ul>
+            <div class="flex">
+                <img src="./assets/search.svg" alt="Description of SVG" />
+                <img src="./assets/shopping.svg" alt="Description of SVG" />
+                <div class="flex item-center justify-center">
+                    <p>EN</p>
+                    <img src="./assets/down.svg" alt="Description of SVG" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Banner -->
+    <div class="relative overflow-hidden">
+        <div class="top-banner container relative mx-auto flex item-center" style="padding-top: 40px;">
+            <div>
+                <div>
+                    <h1 class="capitalize font-mollie font-medium" style="font-size: 72px;">Bring Out your skin's
+                        natural Glow
+                        <img src="./assets/bannerImg.svg" alt="img" />
+                    </h1>
+
+                </div>
+                <p class="text-xl opacity-60">Discover the beauty of healthy, radiant skin with
+                    our
+                    carefully crafted
+                    skincare
+                    solutions.
+                </p>
+                <div class="flex item-center py-10">
+                    <div class="pr-10">
+                        <p class="text-6xl font-mollie" style="color: #164D47">100%</p>
+                        <p class="font-lato">Organic Product</p>
+                    </div>
+                    <div class="px-10" style="border-left: 1px solid black; border-right: 1px solid black;">
+                        <p class="text-6xl font-mollie" style="color: #164D47">135+</p>
+                        <p class="font-lato">Premium Products</p>
+                    </div>
+                    <div class="pl-10">
+                        <p class="text-6xl font-mollie" style="color: #164D47">4K+</p>
+                        <p class="font-lato">Review</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="./assets/bannerphoto.svg" alt="banner image" />
+            </div>
+            <!-- Absolute option -->
+            <div class="absolute left-1/2 right-1/2 transform-center bottom-0">
+                <img src="./assets//explor-btn.svg" alt="btn" />
+            </div>
+            <!-- Backgorund effect -->
+
+        </div>
+        <div class="bottom-dim"></div>
+    </div>
+    <div class="top-dim"></div>
+    <!-- End Banner -->
+    <main>
+        <!-- Category -->
+        <section class="category container mx-auto">
+            <p class="text-2xl text-center">Product Category</p>
+            <div id="product_category" class="font-mollie flex flex-wrap justify-center py-10" style="gap: 100px;">
+                <!-- Loop of category -->
+            </div>
+        </section>
+        <!-- End Category -->
+        <!-- New Product Arriable -->
+        <section>
+            <div class="py-10" style="background-color: var(--secondary-color);">
+                <div class="container mx-auto">
+                    <div>
+                        <h2 class="text-8xl font-mollie font-medium">New Arrival</h2>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div id="newArrivalProducts" class="grid grid-cols-4 py-10 gap-6">
+                        <!-- Products lists -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End New Product Arriable -->
+        <!-- Start Story -->
+        <section>
+            <div class="py-10">
+                <div class="container mx-auto font-mollie">
+                    <div>
+                        <h2 class="text-8xl  text-center">Our Story</h2>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div class="font-medium relative">
+                        <p class="text-center" style="font-size: 128px;">skincare should be kind, both to your skin and
+                            to the environment.
+                        </p>
+                        <img class="absolute transform-center left-1/2 right-1/2 top-1/2 -z-10"
+                            src="./assets/products/Artboard 1 1.png" alt="image" />
+                    </div>
+                    <div class="flex item-center justify-center gap-6">
+                        <button class="successBtn">Learn More</button>
+                        <button class="infoBtn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Story -->
+        <!-- Top Selling product -->
+        <section>
+            <div class="py-10">
+                <div class="container mx-auto font-mollie">
+                    <div>
+                        <h2 class="text-8xl">Top Selling Product</h2>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div id="topSellingProducts" class="grid grid-cols-4 py-10 gap-6">
+                        <!-- Products lists -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Top Selling products -->
+        <!-- protect your skin -->
+        <section>
+            <div class="py-10">
+                <div class="font-mollie">
+                    <div class="container mx-auto">
+                        <h2 class="text-8xl">We Protect Your Skin</h2>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div class="flex py-10 gap-6">
+                        <div id="newsBlogs" class="flex gap-6 overflow-x-auto">
+                            <!-- List of news -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End protect your skin -->
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2025 Company Name. All rights reserved.</p>
+    </footer>
+</body>
+<script src="code.js"></script>
+
+</html>

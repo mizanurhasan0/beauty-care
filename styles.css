@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: "mollie";
+    src: url('/assets/fonts/Mollie\ Glaston.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #FCFAF0;
+    --third-color: #45726C;
+    --border-color: #657E68;
+    --font-color: #000000;
+    --font-lato: "Lato", serif;
+    --font-molle: "mollie", serif;
+}
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+/* Global styles */
+body {
+    font-family: var(--font-lato);
+    line-height: 1.6;
+    color: var(--font-color);
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Header styles */
+
+.nav-links li a {
+    color: var(--font-color);
+
+}
+
+.skew-hover {
+    position: relative;
+    padding: 10px 30PX 10PX 30PX;
+}
+
+.skew-hover:hover::after {
+    content: '';
+    position: absolute;
+    transform: skew(-45deg);
+    border: 1px solid var(--border-color);
+    border-radius: 100%;
+    padding: 26px;
+    inset: 0;
+
+}
+
+/* background Dim effect */
+.bottom-dim {
+    position: absolute;
+    width: 454px;
+    height: 454px;
+    background-color: rgba(249, 241, 206, 0.8);
+    box-shadow: 0px 0px 90px 90px rgba(249, 241, 206, 0.8);
+    border-radius: 100%;
+    right: 0;
+    bottom: -20%;
+    z-index: -9999;
+}
+
+.top-dim {
+    position: absolute;
+    width: 454px;
+    height: 454px;
+    background-color: rgb(247, 230, 217, 0.8);
+    box-shadow: 0px 0px 90px 90px rgb(247, 230, 217, 0.8);
+    border-radius: 100%;
+    left: -200px;
+    top: 0;
+    z-index: -9999;
+}
+
+/* Section styles */
+/* Category */
+.cat-item-img {
+    width: 200px;
+    height: 200px;
+    z-index: -9999;
+}
+
+.cat-item {
+    cursor: pointer;
+}
+
+.cat-item:hover img {
+    opacity: 1;
+}
+
+.cat-item:hover h2 {
+    opacity: 50%;
+}
+
+.about {
+    text-align: center;
+}
+
+.services ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+/* Footer styles */
+.main-footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Card */
+.cartImage {
+    border-radius: 6%;
+}
+
+.cartImage img {
+    width: 100%;
+}
+
+/* Button */
+.successBtn {
+    background-color: var(--third-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    padding: 15px 20px 15px 20px;
+    font-weight: 400;
+    font-family: var(--font-lato);
+}
+
+.infoBtn {
+    background-color: transparent;
+    color: var(--font-color);
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    padding: 15px 20px 15px 20px;
+    font-weight: 400;
+    font-family: var(--font-lato);
+}
+
+.card-2.even {
+    background: linear-gradient(90deg, hsla(49, 78%, 89%, 1) 0%, hsla(0, 0%, 100%, 1) 62%);
+    ;
+}
+
+.card-2.odd {
+    background: linear-gradient(90deg, hsla(26, 65%, 91%, 1) 0%, hsla(0, 0%, 100%, 1) 62%);
+}
+
+.card-2 {
+    height: 400px;
+    width: 760px;
+    border-radius: 24px;
+    overflow: hidden;
+}
