@@ -93,6 +93,26 @@ const products = [
         image: "./assets/products/Frame 41.png"
     }
 ];
+const users = [
+    {
+        name: "Emily Thompson",
+        level: "Dermatologist",
+        descirption: "After using this serum for just a week, I noticed a significant improvement in my skin’s texture and radiance. As a dermatologist, I highly recommend it.",
+        image: "./assets/persons/avatar1.png"
+    },
+    {
+        name: "Carlos Diaz",
+        level: "Skincare Enthusiast",
+        descirption: "I’ve tried countless products over the years, but nothing compares to this! My skin has never looked so clear and vibrant!",
+        image: "./assets/persons/avatar3.png"
+    },
+    {
+        name: "Rachel Nguyen",
+        level: "Beauty Influencer",
+        descirption: "This moisturizer is a game changer! My skin feels soft and hydrated all day. I’ve incorporated it into my daily routine and can’t imagine living without it!",
+        image: "./assets/persons/avatar2.png"
+    },
+]
 const news = [
     {
         title: "How to Build a Skincare Routine",
@@ -110,15 +130,15 @@ const news = [
     }, {
         title: "Skincare Tips for Glowing Skin",
         descirption: "Simple, effective tips for achieving a radiant complexion.",
-        image: "./assets/products/Rectangle 47.png"
+        image: "./assets/products/face.png"
     }, {
         title: "How to Build a Skincare Routine",
         descirption: "Step-by-step guide to creating the perfect skincare regimen.",
-        image: "./assets/products/face.png"
+        image: "./assets/products/looson.png"
     }, {
         title: "Skincare Tips for Glowing Skin",
         descirption: "Simple, effective tips for achieving a radiant complexion.",
-        image: "./assets/products/Rectangle 47.png"
+        image: "./assets/products/face.png"
     }, {
         title: "How to Build a Skincare Routine",
         descirption: "Step-by-step guide to creating the perfect skincare regimen.",
@@ -203,5 +223,28 @@ appendContent(
                                 </div>
                                 <img src="${image}" alt="face" />
                             </div>
+    `
+);
+// User Testomonial
+appendContent(
+    document.getElementById('userList'),
+    users,
+    ({ name, descirption, image, level }, idx) => `
+                     <div class="text-center">
+                    <div class="">
+                        <img src="${image}" alt="avatar 1" class="rounded-full" style="width:114px;height:114px"/>
+                    </div>
+
+                    <img src="./assets/Stars.png" alt="star" />
+
+
+                    <p class="text-lg py-10">
+                        ${descirption}
+                    </p>
+                    <div class="text-center">
+                        <p class="text-xl">${name}</p>
+                        <p class="text-base opacity-60">${level}</p>
+                    </div>
+                </div>
     `
 );
