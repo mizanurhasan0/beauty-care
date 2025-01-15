@@ -145,6 +145,32 @@ const news = [
         image: "./assets/products/face.png"
     },
 ];
+const newsData = [
+    {
+        id: 1,
+        title: "Clean Ingedients",
+        descirption: "We use only the safest, most effective ingredients. No parabens, sulfates, or synthetic fragrances",
+        image: "./assets/020-medical.svg"
+    },
+    {
+        id: 2,
+        title: "Cruelty-Free",
+        descirption: "No testing on animals, ever. We are certified cruelty-free and stand against animal cruelty in all its forms.",
+        image: "./assets/026-paraben free.svg"
+    },
+    {
+        id: 3,
+        title: "Eco-Friendly Packaging",
+        descirption: "We use only the safest, most effective ingredients",
+        image: "./assets/028-organic product.svg"
+    },
+    {
+        id: 4,
+        title: "Dermatologist Approved",
+        descirption: "We use only the safest, most effective ingredients",
+        image: "./assets/001-cruelty free.svg"
+    },
+]
 const appendContent = (container, items, templateFn) => {
     items.forEach((item, idx) => {
         const div = document.createElement('div');
@@ -246,5 +272,25 @@ appendContent(
                         <p class="text-base opacity-60">${level}</p>
                     </div>
                 </div>
+    `
+);
+
+// Why Choose our product
+appendContent(
+    document.getElementById('decisionChoice'),
+    newsData,
+    ({ title, descirption, image }, idx) => `
+                    <div class="flex ${idx % 2 === 0 ? '' : 'flex-row-reverse'} gap-6 ${idx + 1 === 4 ? '' : 'border-b-1'} pb-4">
+                                <div class="rounded-full flex item-center justify-center"
+                                    style="background-color: var(--third-color); min-width: 72px;height: 72px;">
+                                    <img src="${image}" alt="logo" />
+                                </div>
+                                <div>
+                                    <p class="text-2xl">${idx + 1}. ${title}</p>
+                                    <p class="text-base">
+                                    ${descirption}
+                                    </p>
+                                </div>
+                            </div>
     `
 );
