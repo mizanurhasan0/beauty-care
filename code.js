@@ -340,6 +340,16 @@ appendContent(
                             </div>
     `
 );
+// Explore Gallery
+appendContent(
+    document.getElementById('exploreGalleryList'),
+    products,
+    ({ title, category, price, image }) => `
+        <div>
+            <div class="gallaryImage"><img class="w-full"  src="${image}" alt="${title}" /></div>
+        </div>
+    `
+);
 // Accordion
 appendContent(
     document.getElementById('accordionList'),
@@ -376,6 +386,7 @@ appendContent(
                         </div>
     `
 );
+
 // Accordioan
 const headers = document.querySelectorAll('.accordion-header');
 
@@ -421,9 +432,7 @@ function updateSlider(index) {
     sliderItems.forEach((item, i) => {
         item.classList.toggle('active', i === index);
     });
-
-    // Calculate the offset to center the active image
-    const offset = -(index - 1) * (sliderItems[0].offsetWidth + 20); // Item width + gap
+    const offset = -(index - 1) * (sliderItems[0].offsetWidth + 20);
     sliderContainer.style.transform = `translateX(${offset}px)`;
 }
 

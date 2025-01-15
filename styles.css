@@ -314,12 +314,9 @@ body {
     justify-content: center;
 }
 
-
-/* 
-.slider-button.left {
-    left: 10px;
+/* Explore Gallery */
+.gallaryImage {
+    width: 424px;
+    height: 424px;
+    overflow: hidden;
 }
-
-.slider-button.right {
-    right: 10px;
-} */
