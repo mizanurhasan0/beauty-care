@@ -294,3 +294,18 @@ appendContent(
                             </div>
     `
 );
+// Accordioan
+const headers = document.querySelectorAll('.accordion-header');
+
+headers.forEach(header => {
+    header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const toggleIcon = header.querySelector('.toggle-icon');
+        // Close all other open content
+        document.querySelectorAll('.accordion-content').forEach(item => item !== content ? item.style.display = 'none' : '');
+
+        // Toggle the clicked content
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        content.style.display === 'block' ? toggleIcon.textContent = '+' : toggleIcon.textContent = '-';
+    });
+});

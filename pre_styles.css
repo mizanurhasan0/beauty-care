@@ -32,9 +32,22 @@
     }
 }
 
+/* Margin & space */
+.space-y-2>*+* {
+    margin-top: 0.5rem;
+}
+
+.space-y-4>*+* {
+    margin-top: 1rem;
+}
+
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
+}
+
+.mt-6 {
+    margin-top: 2rem;
 }
 
 .w-full {
@@ -179,6 +192,10 @@
 
 .border-b-1 {
     border-bottom: 1px solid #bbb
+}
+
+.border-r-1 {
+    border-right: 1px solid #bbb;
 }
 
 .rounded-full {
@@ -342,10 +359,16 @@
     padding-right: 2.5rem;
 }
 
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
 }
+
 
 .py-10 {
     padding-top: 2.5rem;

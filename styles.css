@@ -38,7 +38,6 @@ li {
 /* Global styles */
 body {
     font-family: var(--font-lato);
-    line-height: 1.6;
     color: var(--font-color);
     background-color: var(--primary-color);
     margin: 0;
@@ -123,14 +122,6 @@ body {
     list-style-type: disc;
 }
 
-/* Footer styles */
-.main-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    font-size: 0.9rem;
-}
 
 /* Card */
 .cartImage {
@@ -194,4 +185,81 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 40px;
+}
+
+/* News letter */
+.newsletter {
+    background: linear-gradient(rgba(69, 114, 108, 0.7), rgba(69, 114, 108, 0.7)), url('./assets/products/product4.jpg') center/cover;
+    color: white;
+    height: 486px;
+}
+
+.emailField {
+    background: var(--primary-color);
+    border-radius: 100px;
+    height: 80px;
+    width: 599px;
+    overflow: hidden;
+    display: flex;
+}
+
+.emailField input {
+    flex: 1;
+    padding: 0 10px 0 30px;
+    border: none;
+    outline: none;
+}
+
+/* Accordion */
+
+
+.accordion-item {
+
+    background-color: #F9F9F9;
+}
+
+/* 
+.accordion-header {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    background-color: #F9F9F9;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #ddd;
+}
+*/
+.accordion-content {
+    padding: 10px;
+    display: none;
+}
+
+.accordion-header:active+.accordion-content,
+.accordion-header:focus+.accordion-content {
+    display: block;
+}
+
+/* Footer styles */
+.main-footer {
+    background: var(--secondary-color);
+}
+
+.lastFooter {
+    border-top: 1px solid var(--third-color);
+    height: 75px;
+}
+
+.main-footer .socialLogo {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid var(--border-color);
 }

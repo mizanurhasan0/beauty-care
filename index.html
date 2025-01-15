@@ -212,6 +212,53 @@
                 </div>
             </div>
         </section>
+        <!-- Accordion -->
+        <section class="container mx-auto">
+            <div class="grid grid-cols-2 gap-2">
+                <div>
+                    <img src="./assets/products/face2.png" alt="face" />
+                </div>
+                <div class="accordion flex flex-col gap-6">
+                    <div class="accordion-item rounded-3 p-4">
+                        <div class="accordion-header flex  justify-between cursor-pointer">
+                            <p class="text-2xl font-semibold">What skin types are your products suitable
+                                for?</p>
+                            <p class="toggle-icon text-6xl font-mollie">-</p>
+                        </div>
+                        <div class="accordion-content text-lg font-medium">
+                            <p>Our products are formulated to be safe and effective for all skin types, including
+                                sensitive, oily, dry, and combination skin. Each product description specifies the best
+                                skin types for optimal results, but we recommend doing a patch test before use.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item rounded-3 p-4">
+                        <div class="accordion-header flex cursor-pointer">
+                            <p class="text-2xl font-semibold">What skin types are your products suitable
+                                for?</p>
+                            <p class="toggle-icon text-6xl font-mollie">-</p>
+                        </div>
+                        <div class="accordion-content text-lg font-medium">
+                            <p>Our products are formulated to be safe and effective for all skin types, including
+                                sensitive, oily, dry, and combination skin. Each product description specifies the best
+                                skin types for optimal results, but we recommend doing a patch test before use.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item rounded-3 p-4">
+                        <div class="accordion-header flex cursor-pointer">
+                            <p class="text-2xl font-semibold">What is your return policy?</p>
+                            <p class="toggle-icon text-6xl font-mollie">-</p>
+                        </div>
+                        <div class="accordion-content text-lg font-medium">
+                            <p>Our products are formulated to be safe and effective for all skin types, including
+                                sensitive, oily, dry, and combination skin. Each product description specifies the best
+                                skin types for optimal results, but we recommend doing a patch test before use.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
         <!-- Explore Gallery -->
         <section>
             <div class="py-10" style="background-color: var(--secondary-color);">
@@ -228,11 +275,95 @@
                 </div>
             </div>
         </section>
+        <!-- Newsletter -->
+        <section>
+            <div
+                class="newsletter relative container mx-auto flex flex-col item-center justify-center text-center rounded-3 ">
+                <div class="">
+                    <h2 class="font-mollie text-8xl font-medium py-10">Join Our newsletter</h2>
+                    <p class="font-lato text-xl pb-4">Sign up for our newsletter to receive exclusive access to
+                        the latest
+                        skincare tips, product
+                        launches, and special promotions.</p>
+                </div>
+                <div class="emailField mt-6">
+                    <input class="font-lato text-xl" placeholder="Enter Your email here" />
+                    <div class="flex item-center p-4">
+                        <button class="successBtn">Sent your mail</button>
+                    </div>
+                </div>
+                <img class="absolute top-0 right-0 opacity-60" src="./assets/leaf.svg" alt="leaf" />
+            </div>
+
+        </section>
 
     </main>
 
-    <footer class="main-footer">
-        <p>&copy; 2025 Company Name. All rights reserved.</p>
+    <footer class="main-footer ">
+        <div class="h-full border-b-2">
+            <div class="container mx-auto grid grid-cols-4 gap-6 py-10">
+                <div class="space-y-4">
+                    <img src="./assets/logo.svg" alt="logo" />
+                    <p class="">Discover the beauty of healthy, radiant skin with our carefully crafted skincare
+                        solutions</p>
+                    <div class="flex gap-2">
+                        <div class="socialLogo" style="background-color: var(--third-color);">
+                            <img src="./assets/social/f.png" alt="face" />
+                        </div>
+                        <div class="socialLogo">
+                            <img src="./assets/social/x.png" alt="face" />
+                        </div>
+                        <div class="socialLogo">
+                            <img src=" ./assets/social/p.png" alt="face" />
+                        </div>
+                        <div class="socialLogo">
+                            <img src="./assets/social/i.png" alt="face" />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-2xl pb-4">Quick Links</p>
+                    <div class="flex flex-col space-y-2 text-lg">
+                        <p>Shop</p>
+                        <p>About us</p>
+                        <p>Skincare Blog</p>
+                        <p>FAQs</p>
+                        <p>Shipping & Returnss</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-2xl pb-4">Contact</p>
+                    <div class="flex flex-col space-y-2 text-lg">
+                        <p>Shop</p>
+                        <p>About us</p>
+                        <p>Skincare Blog</p>
+                        <p>FAQs</p>
+                        <p>Shipping & Returnss</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-2xl pb-4">Product</p>
+                    <div class="flex flex-col space-y-2 text-lg">
+                        <p>New Arrivals</p>
+                        <p>Top Selling Product</p>
+                        <p>Discount</p>
+                        <p>FAQs</p>
+                        <p>Shipping & Returnss</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lastFooter">
+                <div class="container mx-auto flex justify-between item-center h-full">
+                    <p>@Glowave 2025, All Right Reserved</p>
+                    <div class="flex item-center gap-2 text-base">
+                        <p class="border-r-1 px-4">Privacy Policy</p>
+                        <p class="border-r-1 px-4">Terms of Use</p>
+                        <p class="border-r-1 px-4">Sales and Refunds</p>
+                        <p class="px-4">Legal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 <script src="code.js"></script>
