@@ -146,14 +146,21 @@
         <section>
             <div class="py-10">
                 <div class="font-mollie">
-                    <div class="container mx-auto">
+                    <div class="container mx-auto flex justify-between item-center">
                         <h2 class="text-8xl">We Protect Your Skin</h2>
                         <div>
-
+                            <div class="flex item-center justify-center py-10 space-x-2">
+                                <button class="slider-button left1" aria-label="Previous">
+                                    <img src="./assets/arrow.png" alt="img" />
+                                </button>
+                                <button class="slider-button right1" aria-label="Next">
+                                    <img src="./assets/arrow.png" alt="img" style="rotate: 180deg;" />
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="flex py-10 gap-6">
-                        <div id="newsBlogs" class="flex gap-6 overflow-x-auto">
+                        <div id="newsBlogs" class="news-container flex gap-6 overflow-x-auto w-scroll-0 scroll-smooth">
                             <!-- List of news -->
                         </div>
                     </div>
@@ -213,7 +220,7 @@
             </div>
         </section>
         <!-- Image Slider -->
-        <section class="container mx-auto py-10">
+        <section class="py-10 relative" style="background-color: var(--secondary-color);">
             <div class="text-center">
                 <p class="font-lato text-2xl">Video Review</p>
                 <h4 class="font-mollie text-8xl font-medium">Loved by Influencers
@@ -221,28 +228,24 @@
             </div>
             <div>
                 <div class="slider relative container mx-auto overflow-hidden">
-                    <button class="slider-button left" aria-label="Previous">&lt;</button>
-                    <div class="slider-container flex">
-                        <div class="slider-item">
-                            <img src="./assets/products/product2.png" alt="Image 1">
-                        </div>
-                        <div class="slider-item">
-                            <img src="./assets/products/product3.png" alt="Image 2">
-                        </div>
-                        <div class="slider-item">
-                            <img src="./assets/products/product2.png" alt="Image 3">
-                        </div>
-                        <div class="slider-item">
-                            <img src="./assets/products/product3.png" alt="Image 4">
-                        </div>
-                        <div class="slider-item">
-                            <img src="./assets/products/product3.png" alt="Image 5">
-                        </div>
+
+                    <div id="reviewUser" class="slider-container flex">
+                        <!-- Review list of user -->
                     </div>
-                    <button class="slider-button right" aria-label="Next">&gt;</button>
+
                 </div>
 
             </div>
+            <div class="flex item-center justify-center py-10 space-x-2">
+                <button class="slider-button left" aria-label="Previous">
+                    <img src="./assets/arrow.png" alt="img" />
+                </button>
+                <button class="slider-button right" aria-label="Next">
+                    <img src="./assets/arrow.png" alt="img" style="rotate: 180deg;" />
+                </button>
+            </div>
+            <img class="absolute top-0 right-0" src="./assets/products/topFlower.png" alt="flower" />
+            <img class="absolute bottom-0 left" src="./assets/products/bottomflower.png" alt="flower" />
         </section>
         <!-- Accordion -->
         <section class="container mx-auto py-10">

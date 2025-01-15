@@ -171,6 +171,32 @@ const newsData = [
         image: "./assets/001-cruelty free.svg"
     },
 ]
+const reviewData = [
+    {
+        id: 1,
+        name: "Evelyn Bennett",
+        role: "Product Manager",
+        image: "./assets/products/product5.jpg"
+    },
+    {
+        id: 2,
+        name: "Cruelty-Free",
+        role: "No testing on animals, ever. We are certified cruelty-free and stand against animal cruelty in all its forms.",
+        image: "./assets/products/product6.jpg"
+    },
+    {
+        id: 3,
+        name: "Eco-Friendly Packaging",
+        role: "We use only the safest, most effective ingredients",
+        image: "./assets/products/product6.jpg"
+    },
+    {
+        id: 4,
+        name: "Dermatologist Approved",
+        role: "We use only the safest, most effective ingredients",
+        image: "./assets/products/product5.jpg"
+    },
+]
 const accordionData = [
     {
         id: 1,
@@ -252,7 +278,7 @@ appendContent(
     document.getElementById('newsBlogs'),
     news,
     ({ title, descirption, image }, idx) => `
-                     <div class="card-2 flex ${idx % 2 === 0 ? 'even' : 'odd'}">
+                     <div class="card-2 news-item flex ${idx % 2 === 0 ? 'even' : 'odd'}">
                                 <div class="font-medium px-10 flex flex-col justify-between py-10">
                                     <div>
                                         <div class="flex">
@@ -330,6 +356,26 @@ appendContent(
                     </div>
     `
 );
+// review user
+// Accordion
+appendContent(
+    document.getElementById('reviewUser'),
+    reviewData,
+    ({ name, image, role }, idx) => `
+                     <div class="slider-item relative">
+                            <img src="${image}" alt="Image 3">
+                            <div class="absolute bottom-4 left-5 flex item-center space-x-2">
+                                <div style="min-width: 56px; min-height: 56px;" class="rounded-full overflow-hidden">
+                                    <img style="object-fit: fill;" src="./assets/persons/avatar1.png" alt="user" />
+                                </div>
+                                <div class="font-medium" style="color: var(--primary-color);">
+                                    <p class="text-xl font-lato ">${name}</p>
+                                    <p class="text-sm">${role}</p>
+                                </div>
+                            </div>
+                        </div>
+    `
+);
 // Accordioan
 const headers = document.querySelectorAll('.accordion-header');
 
@@ -345,6 +391,23 @@ headers.forEach(header => {
         content.style.display === 'block' ? toggleIcon.textContent = '+' : toggleIcon.textContent = '-';
     });
 });
+// We Protect your skin
+const scrollContainer = document.querySelector('.news-container');
+// const slideItems = document.querySelectorAll('.news-item');
+const leftBtn = document.querySelector('.slider-button.left1');
+const rightBtn = document.querySelector('.slider-button.right1');
+
+const scrollAmount = 200;
+// Left Button Click
+leftBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+// Right Button Click
+rightBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
+
 
 // Video SLider:
 const sliderContainer = document.querySelector('.slider-container');
@@ -354,7 +417,6 @@ const rightButton = document.querySelector('.slider-button.right');
 
 let currentIndex = Math.floor(sliderItems.length / 2); // Start with the second item as active
 
-// Function to update the active image and center it
 function updateSlider(index) {
     sliderItems.forEach((item, i) => {
         item.classList.toggle('active', i === index);
