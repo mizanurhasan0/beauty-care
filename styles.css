@@ -212,28 +212,10 @@ body {
 
 /* Accordion */
 
-
 .accordion-item {
-
     background-color: #F9F9F9;
 }
 
-/* 
-.accordion-header {
-    width: 100%;
-    padding: 10px;
-    text-align: left;
-    font-size: 18px;
-    background-color: #F9F9F9;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.accordion-header:hover {
-    background-color: #ddd;
-}
-*/
 .accordion-content {
     padding: 10px;
     display: none;
@@ -262,4 +244,67 @@ body {
     justify-content: center;
     border-radius: 100%;
     border: 1px solid var(--border-color);
+}
+
+
+/* Video Slider */
+/* Slider container styles */
+.slider {
+    /* background-color: red; */
+    /* margin: 0 auto; */
+    /* overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.slider-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.slider-item {
+    /* flex: 0 0 auto; */
+    opacity: 0.6;
+    transform: scale(0.8);
+    transition: transform 0.5s, opacity 0.5s;
+    border-radius: 24px;
+    overflow: hidden;
+    min-width: 424px;
+    min-height: 511px;
+}
+
+.slider-item.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.slider-item img {
+
+    border-radius: 10px;
+}
+
+/* Navigation Buttons */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.slider-button.left {
+    left: 10px;
+}
+
+.slider-button.right {
+    right: 10px;
 }

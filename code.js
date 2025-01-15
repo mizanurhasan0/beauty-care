@@ -171,6 +171,26 @@ const newsData = [
         image: "./assets/001-cruelty free.svg"
     },
 ]
+const accordionData = [
+    {
+        id: 1,
+        title: "What skin types are your products suitable for?",
+        descirption: "Our products are formulated to be safe and effective for all skin types, including sensitive, oily, dry, and combination skin. Each product description specifies the best skin types for optimal results, but we recommend doing a patch test before use",
+
+    },
+    {
+        id: 2,
+        title: "Does it come in other colors?",
+        descirption: "Our products are formulated to be safe and effective for all skin types, including sensitive, oily, dry, and combination skin. Each product description specifies the best skin types for optimal results, but we recommend doing a patch test before use",
+
+    },
+    {
+        id: 3,
+        title: "What is your return policy?",
+        descirption: "Our products are formulated to be safe and effective for all skin types, including sensitive, oily, dry, and combination skin. Each product description specifies the best skin types for optimal results, but we recommend doing a patch test before use",
+
+    },
+]
 const appendContent = (container, items, templateFn) => {
     items.forEach((item, idx) => {
         const div = document.createElement('div');
@@ -294,6 +314,22 @@ appendContent(
                             </div>
     `
 );
+// Accordion
+appendContent(
+    document.getElementById('accordionList'),
+    accordionData,
+    ({ title, descirption }, idx) => `
+                    <div class="accordion-item rounded-3 p-4">
+                        <div class="accordion-header flex  justify-between cursor-pointer">
+                            <p class="text-2xl font-semibold">${title}</p>
+                            <p class="toggle-icon text-6xl font-mollie">-</p>
+                        </div>
+                        <div class="accordion-content text-lg font-medium">
+                            <p>${descirption}</p>
+                        </div>
+                    </div>
+    `
+);
 // Accordioan
 const headers = document.querySelectorAll('.accordion-header');
 
@@ -309,3 +345,37 @@ headers.forEach(header => {
         content.style.display === 'block' ? toggleIcon.textContent = '+' : toggleIcon.textContent = '-';
     });
 });
+
+// Video SLider:
+const sliderContainer = document.querySelector('.slider-container');
+const sliderItems = document.querySelectorAll('.slider-item');
+const leftButton = document.querySelector('.slider-button.left');
+const rightButton = document.querySelector('.slider-button.right');
+
+let currentIndex = Math.floor(sliderItems.length / 2); // Start with the second item as active
+
+// Function to update the active image and center it
+function updateSlider(index) {
+    sliderItems.forEach((item, i) => {
+        item.classList.toggle('active', i === index);
+    });
+
+    // Calculate the offset to center the active image
+    const offset = -(index - 1) * (sliderItems[0].offsetWidth + 20); // Item width + gap
+    sliderContainer.style.transform = `translateX(${offset}px)`;
+}
+
+// Left Button Click
+leftButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
+    updateSlider(currentIndex);
+});
+
+// Right Button Click
+rightButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % sliderItems.length;
+    updateSlider(currentIndex);
+});
+
+// Initialize Slider
+updateSlider(currentIndex);

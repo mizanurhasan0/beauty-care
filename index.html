@@ -105,7 +105,7 @@
             <div class="py-10">
                 <div class="container mx-auto font-mollie">
                     <div>
-                        <h2 class="text-8xl  text-center">Our Story</h2>
+                        <h2 class="text-8xl  text-center font-medium">Our Story</h2>
                         <div>
 
                         </div>
@@ -212,48 +212,47 @@
                 </div>
             </div>
         </section>
+        <!-- Image Slider -->
+        <section class="container mx-auto py-10">
+            <div class="text-center">
+                <p class="font-lato text-2xl">Video Review</p>
+                <h4 class="font-mollie text-8xl font-medium">Loved by Influencers
+                </h4>
+            </div>
+            <div>
+                <div class="slider relative container mx-auto overflow-hidden">
+                    <button class="slider-button left" aria-label="Previous">&lt;</button>
+                    <div class="slider-container flex">
+                        <div class="slider-item">
+                            <img src="./assets/products/product2.png" alt="Image 1">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./assets/products/product3.png" alt="Image 2">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./assets/products/product2.png" alt="Image 3">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./assets/products/product3.png" alt="Image 4">
+                        </div>
+                        <div class="slider-item">
+                            <img src="./assets/products/product3.png" alt="Image 5">
+                        </div>
+                    </div>
+                    <button class="slider-button right" aria-label="Next">&gt;</button>
+                </div>
+
+            </div>
+        </section>
         <!-- Accordion -->
-        <section class="container mx-auto">
-            <div class="grid grid-cols-2 gap-2">
-                <div>
+        <section class="container mx-auto py-10">
+            <div class="grid grid-cols-2">
+                <div class="relative">
+                    <img class="absolute top-0" src="./assets/star.svg" alt="star" />
                     <img src="./assets/products/face2.png" alt="face" />
                 </div>
-                <div class="accordion flex flex-col gap-6">
-                    <div class="accordion-item rounded-3 p-4">
-                        <div class="accordion-header flex  justify-between cursor-pointer">
-                            <p class="text-2xl font-semibold">What skin types are your products suitable
-                                for?</p>
-                            <p class="toggle-icon text-6xl font-mollie">-</p>
-                        </div>
-                        <div class="accordion-content text-lg font-medium">
-                            <p>Our products are formulated to be safe and effective for all skin types, including
-                                sensitive, oily, dry, and combination skin. Each product description specifies the best
-                                skin types for optimal results, but we recommend doing a patch test before use.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item rounded-3 p-4">
-                        <div class="accordion-header flex cursor-pointer">
-                            <p class="text-2xl font-semibold">What skin types are your products suitable
-                                for?</p>
-                            <p class="toggle-icon text-6xl font-mollie">-</p>
-                        </div>
-                        <div class="accordion-content text-lg font-medium">
-                            <p>Our products are formulated to be safe and effective for all skin types, including
-                                sensitive, oily, dry, and combination skin. Each product description specifies the best
-                                skin types for optimal results, but we recommend doing a patch test before use.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item rounded-3 p-4">
-                        <div class="accordion-header flex cursor-pointer">
-                            <p class="text-2xl font-semibold">What is your return policy?</p>
-                            <p class="toggle-icon text-6xl font-mollie">-</p>
-                        </div>
-                        <div class="accordion-content text-lg font-medium">
-                            <p>Our products are formulated to be safe and effective for all skin types, including
-                                sensitive, oily, dry, and combination skin. Each product description specifies the best
-                                skin types for optimal results, but we recommend doing a patch test before use.</p>
-                        </div>
-                    </div>
+                <div id="accordionList" class="accordion flex flex-col gap-6">
+                    <!-- List of Accordion data -->
                 </div>
             </div>
 
