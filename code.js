@@ -404,7 +404,6 @@ headers.forEach(header => {
 });
 // We Protect your skin
 const scrollContainer = document.querySelector('.news-container');
-// const slideItems = document.querySelectorAll('.news-item');
 const leftBtn = document.querySelector('.slider-button.left1');
 const rightBtn = document.querySelector('.slider-button.right1');
 
@@ -419,6 +418,20 @@ rightBtn.addEventListener('click', () => {
     scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 });
 
+// Explore Gallery
+const gallryContainer = document.getElementById('exploreGalleryList');
+const leftBtn2 = document.querySelector('.slider-button.left2');
+const rightBtn2 = document.querySelector('.slider-button.right2');
+
+// Left Button Click
+leftBtn2.addEventListener('click', () => {
+    gallryContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+// Right Button Click
+rightBtn2.addEventListener('click', () => {
+    gallryContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
 
 // Video SLider:
 const sliderContainer = document.querySelector('.slider-container');
