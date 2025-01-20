@@ -402,36 +402,38 @@ headers.forEach(header => {
         content.style.display === 'block' ? toggleIcon.textContent = '+' : toggleIcon.textContent = '-';
     });
 });
+
+// Reusable Constants
+function setupScrollButtons(container, leftButton, rightButton, amount) {
+    leftButton.addEventListener('click', () => container.scrollBy({ left: -amount, behavior: 'smooth' }))
+    rightButton.addEventListener('click', () => container.scrollBy({ left: amount, behavior: 'smooth' }))
+
+}
 // We Protect your skin
-const scrollContainer = document.querySelector('.news-container');
-const leftBtn = document.querySelector('.slider-button.left1');
-const rightBtn = document.querySelector('.slider-button.right1');
+const SCROLL_AMOUNT = 200;
+// 1. News Container Scrolling
+const newsContainer = document.querySelector('.news-container');
+const leftNewsButton = document.querySelector('.slider-button.left1');
+const rightNewsButton = document.querySelector('.slider-button.right1');
+setupScrollButtons(newsContainer, leftNewsButton, rightNewsButton, SCROLL_AMOUNT);
 
-const scrollAmount = 200;
-// Left Button Click
-leftBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-});
+// Explore Gallery padding Adjustment
+const explorHeader = document.getElementById('exploreGalleryHeader');
+const galleryContainer = document.getElementById('exploreGalleryList');
 
-// Right Button Click
-rightBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-});
+function updatePadding() {
+    const offset = explorHeader.getBoundingClientRect().left;
+    galleryContainer.style.paddingLeft = `${offset}px`;
+}
+const resizeObserver = new ResizeObserver(() => updatePadding());
 
-// Explore Gallery
-const gallryContainer = document.getElementById('exploreGalleryList');
+resizeObserver.observe(document.body);
+updatePadding();
+
+
 const leftBtn2 = document.querySelector('.slider-button.left2');
 const rightBtn2 = document.querySelector('.slider-button.right2');
-
-// Left Button Click
-leftBtn2.addEventListener('click', () => {
-    gallryContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-});
-
-// Right Button Click
-rightBtn2.addEventListener('click', () => {
-    gallryContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-});
+setupScrollButtons(galleryContainer, leftBtn2, rightBtn2, SCROLL_AMOUNT);
 
 // Video SLider:
 const sliderContainer = document.querySelector('.slider-container');
