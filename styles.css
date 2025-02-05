@@ -320,3 +320,186 @@ body {
     height: 424px;
     overflow: hidden;
 }
+
+/* Testing */
+.body2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .carousel {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+} */
+
+/* 
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.controls {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+} */
+
+/* button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+} */
+
+/*  */
+
+
+/*Slider Classes*/
+.cascade-slider_container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin: 25px auto;
+    padding-top: 150px;
+    overflow-x: hidden;
+}
+
+.cascade-slider_item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0.3);
+    transition: all 1s ease;
+    /* opacity: 0; */
+    /* z-index: -1; */
+    /* text-align: center; */
+}
+
+.cascade-slider_item.next {
+    /* left: 50%; */
+    transform: translateY(-50%) translateX(-135%) scale(0.8);
+    filter: brightness(80%);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.cascade-slider_item.prev {
+    /* left: 50%; */
+    transform: translateY(-50%) translateX(35%) scale(0.8);
+    filter: brightness(85%);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.cascade-slider_item.now {
+    /* top: 50%;
+    left: 50%; */
+    transform: translateY(-50%) translateX(-50%) scale(1);
+    opacity: 1;
+    z-index: 5;
+}
+
+.cascade-slider_arrow {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.cascade-slider_arrow-left {
+    left: 20px;
+}
+
+.cascade-slider_arrow-right {
+    right: 20px;
+}
+
+.cascade-slider_arrow-left img {
+    height: 40px;
+    left: 40px;
+}
+
+.cascade-slider_arrow-right img {
+    height: 40px;
+    left: 40px;
+}
+
+/* .cascade-slider_nav {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+
+.cascade-slider_dot {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #4196EF;
+    margin: 3px;
+    transition: all 0.5s;
+    background: none;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.cascade-slider_dot:hover {
+    background: #2c8fab;
+}
+
+.cascade-slider_dot.cur {
+    background: #2c8fab;
+    width: 17px;
+    height: 17px;
+
+} */
+
+/*Profile card classes*/
+.card {
+    background-color: #fff;
+    color: #243C82;
+    width: 450px;
+    height: 215px;
+    border-radius: 20px;
+    transition: all 1s 0s;
+    vertical-align: middle;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* .photo {
+    width: 50%;
+    vertical-align: middle;
+    display: inline;
+    overflow: hidden;
+} */
+
+.photo img {
+    /* transform: translateY(-35px) translateX(-10px); */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}

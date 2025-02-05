@@ -465,3 +465,87 @@ rightButton.addEventListener('click', () => {
 
 // Initialize Slider
 updateSlider(currentIndex);
+
+// Testing
+const images = [
+    'https://picsum.photos/200/300',
+    'https://picsum.photos/200/300',
+    'https://picsum.photos/200/300',
+    'https://picsum.photos/200/300',
+];
+
+const carouselInner = document.getElementById('carousel-inner');
+let angle = 0;
+let step = 360 / images.length;
+
+images.forEach((src, index) => {
+    let item = document.createElement('div');
+    item.classList.add('carousel-item');
+    item.style.backgroundImage = `url(${src})`;
+    item.style.transform = `rotateY(${index * step}deg) translateZ(300px)`;
+    carouselInner.appendChild(item);
+});
+
+function rotateCarousel(direction) {
+    angle += direction * step;
+    carouselInner.style.transform = `rotateY(${angle}deg)`;
+}
+
+// 
+class CascadeSlider {
+    constructor(selector, options) {
+        this.container = document.querySelector(selector);
+        this.itemClass = options.itemClass || 'cascade-slider_item';
+        this.arrowClass = options.arrowClass || 'cascade-slider_arrow';
+        this.items = [...this.container.querySelectorAll('.' + this.itemClass)];
+        this.arrows = [...this.container.querySelectorAll('.' + this.arrowClass)];
+        this.itemCount = this.items.length;
+        this.currentIndex = 0;
+        this.changeIndex(this.currentIndex);
+        this.setupEventListeners();
+        this.addDataAttributes();
+
+    }
+
+    setupEventListeners() {
+        this.arrows.forEach(arrow => {
+            arrow.addEventListener('click', () => {
+                const action = arrow.dataset.action;
+                const nowIndex = this.items.findIndex(item => item.classList.contains('now'));
+
+                if (action === 'next') {
+                    this.changeIndex((nowIndex + 1) % this.itemCount);
+                } else if (action === 'prev') {
+                    this.changeIndex((nowIndex - 1 + this.itemCount) % this.itemCount);
+                }
+            });
+        });
+
+        // document.querySelectorAll('.cascade-slider_dot').forEach((dot, index) => {
+        //     dot.addEventListener('click', () => {
+        //         document.querySelectorAll('.cascade-slider_dot').forEach(d => d.classList.remove('cur'));
+        //         dot.classList.add('cur');
+        //         this.changeIndex(index);
+        //     });
+        // });
+    }
+
+    addDataAttributes() {
+        this.items.forEach((item, index) => item.setAttribute('data-slide-number', index));
+    }
+
+    changeIndex(newIndex) {
+        this.items.forEach(item => item.classList.remove('now', 'next', 'prev'));
+        this.items[newIndex].classList.add('now');
+
+        this.items[newIndex === this.itemCount - 1 ? 0 : newIndex + 1].classList.add('next');
+
+        this.items[newIndex === 0 ? this.itemCount - 1 : newIndex - 1].classList.add('prev');
+
+    }
+}
+
+new CascadeSlider('#cascade-slider', {
+    itemClass: 'cascade-slider_item',
+    arrowClass: 'cascade-slider_arrow'
+});
